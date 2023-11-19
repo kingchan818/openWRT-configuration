@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  openwrt:
+    image: sulinggg/openwrt:x86_64
+    restart: always
+    container_name: openwrt
+    networks:
+      - macnet
+
+networks:
+  macnet:
+    driver: macvlan
+    driver_opts:
+      parent: enp2s0
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
