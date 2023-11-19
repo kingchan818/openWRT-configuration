@@ -4,6 +4,7 @@ version: '2'
 services:
   openwrt:
     image: sulinggg/openwrt:x86_64
+    privileged: true
     restart: always
     container_name: openwrt
     volumes:
