@@ -1,5 +1,6 @@
 version: '3'
 
+
 services:
   openwrt:
     image: sulinggg/openwrt:x86_64
@@ -7,6 +8,7 @@ services:
     container_name: openwrt
     networks:
       - macnet
+
 
 networks:
   macnet:
