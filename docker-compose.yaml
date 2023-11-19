@@ -6,6 +6,8 @@ services:
     image: sulinggg/openwrt:x86_64
     restart: always
     container_name: openwrt
+    volumes:
+      - ./openwrt:/etc/config
     networks:
       - macnet
     command: /sbin/init
